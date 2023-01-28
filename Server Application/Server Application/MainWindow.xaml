@@ -1,0 +1,31 @@
+﻿<Window x:Class="Server_Application.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Server_Application"
+        mc:Ignorable="d"
+        Title="Server" Height="396" Width="710" ResizeMode="CanMinimize" Background="#FF232326">
+    <Grid HorizontalAlignment="Left" Width="311" Margin="332,0,0,0">
+        <TextBox x:Name="songNameTextBox" HorizontalAlignment="Left" Height="30" Margin="110,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" FontSize="16"/>
+        <Button x:Name="openSongFileButton" Content="Open Song File" HorizontalAlignment="Left" Height="30" Margin="6,152,0,0" VerticalAlignment="Top" Width="95" Click="openSongFileButton_Click"/>
+        <Label Content="Song Panel" HorizontalAlignment="Center" Height="44" Margin="0,9,0,0" VerticalAlignment="Top" Width="126" FontSize="20" Background="{x:Null}" Foreground="White"/>
+        <Label Content="Song Name" HorizontalAlignment="Left" Margin="0,66,0,0" VerticalAlignment="Top" Width="100" FontSize="14" Height="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White"/>
+        <TextBox x:Name="artistNameTextBox" HorizontalAlignment="Left" Height="30" Margin="110,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" FontSize="16"/>
+        <Label Content="Artist Name" HorizontalAlignment="Left" Margin="0,102,0,0" VerticalAlignment="Top" Width="100" FontSize="14" Height="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White"/>
+        <Button x:Name="openImageFileButton" Content="Open Image File" HorizontalAlignment="Left" Height="30" Margin="6,197,0,0" VerticalAlignment="Top" Width="95" Click="openImageFileButton_Click"/>
+        <Label x:Name="songFileNameLabel" Content="" HorizontalAlignment="Left" Height="30" Margin="112,152,0,0" VerticalAlignment="Top" Width="176" FontSize="14" VerticalContentAlignment="Center" Background="#FFE7A7A7"/>
+        <Label x:Name="imageFileNameLabel" Content="" HorizontalAlignment="Left" Height="30" Margin="112,197,0,0" VerticalAlignment="Top" Width="176" FontSize="14" VerticalContentAlignment="Center" Background="#FFE7A7A7"/>
+        <Button x:Name="addToDatabaseButton" Content="Add to Database" HorizontalAlignment="Left" Height="32" Margin="104,263,0,0" VerticalAlignment="Top" Width="94" Click="addToDatabaseButton_Click"/>
+        <Grid Margin="-298,0,338,19">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="107*"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer Margin="-3,47,0,3" VerticalScrollBarVisibility="Auto" Grid.RowSpan="2">
+                <StackPanel x:Name="connectedClientsStackPanel" Width="252"/>
+            </ScrollViewer>
+            <Label Content="Connected Clients" HorizontalAlignment="Left" Margin="43,14,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontSize="20"/>
+        </Grid>
+    </Grid>
+</Window>
